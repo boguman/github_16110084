@@ -1,1 +1,15 @@
+Sid, Token 발급 후 테스트
+-----------------------------------------------------------------
 
+from twilio.rest import Client
+
+account_sid = 'enter sid'
+auth_token = 'enter token'
+client = Client(account_sid, auth_token)
+
+message = client.messages \
+                .create(
+                  body="test테스트0123456789.", 
+                  from_='',          
+                  to=''        
+                )
